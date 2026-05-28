@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Simulator Uji Hipotesis</title>
+
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="card">
+
+      <h1>📊 Simulator Uji Hipotesis</h1>
+
+      <p class="subtitle">
+        Media Pembelajaran Statistik Interaktif
+      </p>
+
+      <!-- CONTROL -->
+      <div class="controls">
+
+        <!-- MODE UJI -->
+        <div class="control-box">
+
+          <label>Jenis Uji</label>
+
+          <select id="testType">
+
+            <option value="right">
+              Uji Satu Ekor Kanan
+            </option>
+
+            <option value="left">
+              Uji Satu Ekor Kiri
+            </option>
+
+            <option value="two">
+              Uji Dua Ekor
+            </option>
+
+          </select>
+
+        </div>
+
+        <!-- ALPHA -->
+        <div class="control-box">
+
+          <label>Alpha</label>
+
+          <select id="alphaSelect">
+
+            <option value="1.645">
+              0.05
+            </option>
+
+            <option value="2.326">
+              0.01
+            </option>
+
+          </select>
+
+        </div>
+
+        <!-- MODE VIEW -->
+        <div class="control-box">
+
+          <label>Mode Tampilan</label>
+
+          <select id="viewMode">
+
+            <option value="2d">
+              Mode 2D
+            </option>
+
+            <option value="3d">
+              Mode 3D
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+      <!-- SLIDER -->
+      <div class="slider-area">
+
+        <label>Nilai Z Hitung</label>
+
+        <input
+          type="range"
+          id="zSlider"
+          min="-4"
+          max="4"
+          step="0.1"
+          value="0"
+        >
+
+        <span id="zValue">0</span>
+
+      </div>
+
+      <!-- INFO -->
+      <div class="info-box">
+
+        <p>
+          <strong>Z Hitung :</strong>
+          <span id="zDisplay">0</span>
+        </p>
+
+        <p>
+          <strong>Z Tabel :</strong>
+          <span id="zTable">1.645</span>
+        </p>
+
+      </div>
+
+      <!-- CHART -->
+      <div id="chart"></div>
+
+      <!-- RESULT -->
+       <h2 id="result"></h2>
+      
+      <div style="text-align:center; margin-top:30px;">
+
+  <a href="budaya.html">
+
+    <button class="culture-btn">
+      Eksplorasi Budaya Kalimantan
+    </button>
+
+  </a>
+
+</div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
